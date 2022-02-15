@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#wrap {
+  margin: 0 auto;
+  position: relative;
+}
+
+/*header*/
+#header {
+  width: 100%;
+  height: 170px;
+  background-color: aqua;
+}
+.navigation_bar {
+  width: 100%;
+  height: 100%;
+  background-color: yellow;
+}
+.logo {
+  float:left;
+  width: 250px;
+  height: 100px;
+  background-color: yellowgreen;
+}
+.category {
+  float:right;
+  width:87%;
+  height: 100px;
+  background-color: bisque;
+}
+.searchbar {
+  float: right;
+  width: 200px;
+  height: 70px;
+  background-color: skyblue;
+}
+
+
+/*container*/
+#container {
+  width: 100%;
+  min-height: 1000px;
+  background-color: gray;
+}
+#main_image {
+  clear: both;
+  width: 100%;
+  height: 400px;
+  background-color: pink;
+  overflow: hidden;
+}
+#aditem {
+  position: relative;
+  margin: 0 auto;
+  width: 90%;
+  height: 200px;
+  background-color: blue;
+}
+#bestitem {
+  position: relative;
+  margin: 0 auto;
+  width: 90%;
+  height: 200px;
+  background-color: rgb(158, 255, 198);
+}
+#newitem {
+  position: relative;
+  margin: 0 auto;
+  width: 90%;
+  height: 200px;
+  background-color: rgb(70, 13, 46);
+}
+
+
+
+/*footer*/
+#footer {
+  width: 100%;
+  height: 500px;
+  background-color: blue;
+}
+.info {
+  width: 100%;
+  height: 400px;
+  background-color: aliceblue;
+}
+.lastlink {
+  width: 100%;
+  height: 100px;
+  background-color: green;
+}
