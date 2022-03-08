@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>쇼핑몰</title>
+  <link rel="stylesheet" href="join.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&family=Shippori+Antique+B1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/463ee81f7d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="wrap">
+    <div id="first"><p>회원가입</p></div>
+    <div class=join">
+      <div class="title"><p>필수 정보 입력</p></div>
+      <form>
+        <div><p>이름</p><input type="text" required/></div>
+        <div><p>아이디</p><input type="text" required/></div>
+        <div><p>이메일</p><input type="email" required/></div>
+        <div><p>비밀번호</p><input type="password" required/></div>
+        <div><p>비밀번호 재입력</p><input type="password" required/></div>
+        <div><p>휴대전화</p><input class="tel" type="text" required/><p id="line">-</p><input class="tel" type="number" required/><p id="line">-</p><input class="tel" type="number" required/></div>
+      </form>
+    </div>
+    <div class="join">
+      <div class="title"><p>부가 정보 입력</p></div>
+      <form>
+        <p>주소</p><input type="text" required/>
+      </form>
+      
+    </div>
+    <div class="join">
+      <form>
+        <input id="agree" type="checkbox" required/><p>모든 약관에 동의합니다.</p>
+      </form>
+    </div>
+    <form><input id="submit" type="submit" value="Join"/></fo>  
+  </div>
+</body>
+</html>

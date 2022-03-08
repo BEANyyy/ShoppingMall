@@ -1,53 +1,260 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>쇼핑몰</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div id="wrap">
-      <div id="header">
-          <div id="navigation_bar">
-              <ul>
-                  <li class="logo">
-                    <a href="#">로고 이미지</a>
-                  </li>
-                  <li class="category">
-                        <ul>
-                          <li class="cate"><a href="#">BEST</a></li>
-                          <li class="cate"><a href="#"><b>NEW</b></a></li>
-                          <li class="cate"><a href="#"><b>SALE</b></a></li>
-                        </ul>
-                  </li>
-                  <li class="searchbar">검색바</li>
-              </ul>
-          </div>
-      </div>
-      <div id="container">
-          <div id-="contents">
-            <div id="main_image">메인이미지</div>
-            <div id="aditem">광고상품</div>
-            <div id="bestitem">베스트상품</div>
-            <div id="newitem">새상품</div>
-          </div>
-      </div>
-      <div id="footer">
-          <ul class="info"> footer - 관련 정보 상세
-            <li class=""></li>
-            <li class=""></li>
-            <li class=""></li>
-            <li class=""></li>
-            <li class=""></li>
+
+<head>
+  <meta charset="UTF-8">
+  <title>쇼핑몰</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&family=Shippori+Antique+B1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/463ee81f7d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id="wrap">
+
+    <!-- 헤더 -->
+    <div id="header">
+      <!-- 위쪽 내비게이션 바  -->
+      <nav class="navbar">
+
+        <div class="logo">
+          <!-- <i class="fa-solid fa-leaf"></i> 로고 아이콘 링크 -->
+          <a href="#">Beans'</a>
+        </div>
+
+        <div class="nav_category">
+          <ul id="cate">
+            <li class="main_menu"><a href="#">Women</a></li>
+            <ul class="sub_menu" id="sub_menu1">
+              <li><a href="#">Women's New Arrivals</a></li>
+              <li><a href="#">Women's Best Sellers</a></li>
+              <li><a href="#">Women's Jeans</a></li>
+              <li><a href="#">Women's Shorts</a></li>
+              <li><a href="#">Women's Jackets</a></li>
+              <li><a href="#">Skirts</a></li>
+            </ul>
+            <li class="main_menu"><a href="#">Men</a></li>
+            <ul class="sub_menu" id="sub_menu2">
+              <li><a href="#">Men's New Arrivals</a></li>
+              <li><a href="#">Men's Best Sellers</a></li>
+              <li><a href="#">Men's Jeans</a></li>
+              <li><a href="#">Men's Shorts</a></li>
+              <li><a href="#">Men's Jackets</a></li>
+            </ul>
+            <li class="main_menu"><a href="#">Accesories</a></li>
+            <li class="main_menu"><a href="#">Discover</a></li>
+            <ul class="sub_menu" id="sub_menu3">
+              <li><a href="#">Instagram</a></li>
+            </ul>
+            <li class="main_menu"><a href="#">Clearance</a></li>
           </ul>
-        <div class="lastlink"> footer - 하단 링크 부분
-            <a href="#">1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">4</a>
-            <a href="#">5</a>
+        </div>
+        <!-- 로그인 & 회원가입 -->
+        <div class="nav_join">
+          <li><a href="login.html">login</a></li>
+          <li><a href="join.html">join</a></li>
+        </div>
+
+      </nav>
+    </div>
+
+
+    <!-- 콘텐츠-->
+    <div id="container">
+      <!--유저 창  -->
+      <div class="user">
+        <ul class="user_menu">
+          <li id="search">
+            <form class="search-container">
+              <input type="text" id="search-bar" placeholder="검색어 입력">
+              <li id="search"><a href="#"><img class="search-icon" src="img/search-icon.png"></a></li>
+            </form>
+          </li>
+          <li id="wishlist"><a href="#"><img class="wishlist-icon" src="img/heart.png">찜</a></li>
+          <li id="cart"><a href="#"><img class="wishlist-icon" src="img/shopping-cart.png">장바구니</a></li>
+        </ul>
+      </div>
+
+      <div id-="contents">
+        <div id="main_image">
+          <div>
+            <img class="img_list1" src="img/shoes.jpg">
+          </div>
+          <div>
+            <img class="img_list2" src="img/turntable.jpg">
+          </div>
+        </div>
+        <div id="bestitem">
+          <p>BEST ITEM</p>
+          <ul id="bestlist">
+            <li class="b_item">
+              <div>
+                <div class="b_item_box">
+                  <p>BEST SELLER</p>
+                </div>
+                <img class="b_img_list" src="img/pink-shoes-gbe6e20137_1920.jpg">  
+                <p>pink shoes</p>
+                <p>$99.00</p>
+              </div>
+            </li>
+            <li class="b_item">
+              <div>
+                <div class="b_item_box">
+                  <p>BEST SELLER</p>
+                </div>
+                <img class="b_img_list" src="img/shoe-gde143de3b_1920.jpg">
+                <p>black shoes1</p>
+                <p>$99.00</p>
+              </div>
+            </li>
+            <li class="b_item">
+              <div>
+                <div class="b_item_box">
+                  <p>BEST SELLER</p>
+                </div>
+                <img class="b_img_list" src="img/black-shoes-g53be9e0e4_1920.jpg">
+                <p>black shoes2</p>
+                <p>$99.00</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div id="aditem">
+          <p>AD</p>
+          <ul id="bestlist">
+            <li class="b_item">
+              <div>
+                <div class="b_item_box">
+                  <p>AD</p>
+                </div>
+                <img class="b_img_list" src="img/pink-shoes-gbe6e20137_1920.jpg">
+                <p>pink shoes</p>
+                <p>$99.00</p>
+              </div>
+            </li>
+            <li class="b_item">
+              <div>
+                <div class="b_item_box">
+                  <p>AD</p>
+                </div>
+                <img class="b_img_list" src="img/shoe-gde143de3b_1920.jpg">
+                <p>black shoes1</p>
+                <p>$99.00</p>
+              </div>
+            </li>
+            <li class="b_item">
+              <div>
+                <div class="b_item_box">
+                  <p>AD</p>
+                </div>
+                <img class="b_img_list" src="img/black-shoes-g53be9e0e4_1920.jpg">
+                <p>black shoes2</p>
+                <p>$99.00</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div id="newitem">
+          <p>NEW ITEM</p>
+          <ul id="bestlist">
+            <li class="b_item">
+              <div>
+                <div class="b_item_box">
+                  <p>NEW ARRIVALS</p>
+                </div>
+                <img class="b_img_list" src="img/pink-shoes-gbe6e20137_1920.jpg">
+                <p>pink shoes</p>
+                <p>$99.00</p>
+              </div>
+            </li>
+            <li class="b_item">
+              <div>
+                <div class="b_item_box">
+                  <p>NEW ARRIVALS</p>
+                </div>
+                <img class="b_img_list" src="img/shoe-gde143de3b_1920.jpg">
+                <p>black shoes1</p>
+                <p>$99.00</p>
+              </div>
+            </li>
+            <li class="b_item">
+              <div>
+                <div class="b_item_box">
+                  <p>NEW ARRIVALS</p>
+                </div>
+                <img class="b_img_list" src="img/black-shoes-g53be9e0e4_1920.jpg">
+                <p>black shoes2</p>
+                <p>$99.00</p>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
-  </body>
+
+
+    <!-- 하단 -->
+    <div id="footer">
+      <ul class="info">
+        <li>
+          <div class="box">
+            <h3>COMPANY. (주) 콩콩콩 / BEANS CO.</h3>
+            <p><span>owner. 정예빈 / JEONG YE BIN</span> <span>tel. 010-8703-0139</span></p>
+            <p><span>business no. 013-08-00025</span></p>
+            <p><span>personal info manager. 정쪼꼬 (chocothecustestdog@never.com)</span></p>
+            <p><span>address. 부산광역시 남구 용소로 45, 인문사회과학대학(C25) (대연동)</span></p>
+            <p>copyright © <b>BEANS'</b> all rights reserved / published by plain design</p>
+          </div>
+        </li>
+        <li>
+          <div class="box">
+            <h3>C/S CENTER</h3>
+            <h4>010-8703-0139</h4>
+            <p>OPEN : am00:00 - pm00:00</p>
+            <p>BREAK : pm00:00-pm00:00</p>
+            <p>(Always OFF)</p>
+          </div>
+        </li>
+        <li>
+          <div class="box">
+            <h3>BANK ACCOUNT</h3>
+            <p>농협 356-0777-3929-33</p>
+            <p>예금주: ME ㅋ</p>
+          </div>
+        </li>
+      </ul>
+      <div class="lastlink">
+        <ul>
+          <li>
+            <a href="#">홈으로</a>
+          </li>
+          <li>
+            <a href="#">회사소개</a>
+          </li>
+          <li>
+            <a href="#">이용약관</a>
+          </li>
+          <li>
+            <a href="#">개인정보취급방침</a>
+          </li>
+          <li>
+            <a href="#">이용안내</a>
+          </li>
+          <li>
+            <a href="#">고객센터</a>
+          </li>
+          <li>
+            <a href="#">자주묻는질문</a>
+          </li>
+          <li>
+            <a href="#">라이브서버 정신차려</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+</body>
+
 </html>

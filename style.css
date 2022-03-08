@@ -2,7 +2,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #F2F2F2;
 }
+
+a {
+  text-decoration: none;
+  color:#0D0D0D;
+}
+
 #wrap {
   margin: 0 auto;
   position: relative;
@@ -11,84 +19,377 @@
 /*header*/
 #header {
   width: 100%;
-  height: 170px;
-  background-color: aqua;
+  z-index: 289;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
-.navigation_bar {
+.navbar {
   width: 100%;
-  height: 100%;
-  background-color: yellow;
+  height: 80px;
+  display: flex; /*flexbox로 지정*/
+  justify-content: space-between; /*간격 띄워서 배치*/
+  align-items: center; /*중간에 배치*/
+  padding: 12px;
+  
 }
+
 .logo {
+  display: flex;
   float:left;
   width: 250px;
-  height: 100px;
-  background-color: yellowgreen;
-}
-.category {
-  float:right;
-  width:87%;
-  height: 100px;
-  background-color: bisque;
-}
-.searchbar {
-  float: right;
-  width: 200px;
   height: 70px;
-  background-color: skyblue;
+  font-style: #403A2F;
+}
+/* .logo i{
+  width: 20px;
+  font-size: 50px;
+  color:red;
+} */
+.logo a {
+  padding-left: 30px;
+  padding-top: 10px;
+  font-family: 'Roboto', sans-serif;
+  color: #0D0D0D;
+  font-size: 50px;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+}
+
+.nav_category {
+  display: flex;
+  padding-left: 100px;
+  width: 90%;
+  height: 80px;
+}
+#cate {
+  width:100%;
+  padding-top: 30px;
+  display: flex;
+}
+
+.main_menu {
+  padding: 8px 50px;
+}
+
+.main_menu a:hover { /*마우스 커서 올리면 글자 색 바뀜*/
+  color:#595451;
+}
+
+.main_menu a {
+  display: block;
+  font-weight: 600;
+  text-align: center;
+}
+
+.sub_menu {
+  position: absolute;
+  display: none;
+  top: 80px; 
+  background-color: aliceblue;
+}
+#sub_menu1 { /*드롭다운 메뉴 세부 분류*/
+  width: 52%;
+  padding-left: 5px;
+  left: 365px;
+}
+#sub_menu2 {
+  left: 525px;
+}
+#sub_menu3 {
+  left: 850px;
+}
+
+.sub_menu a {
+  position: relative;
+  display: block;
+  padding: 5px 0px;
+  font-size: 15px;
+}
+
+.sub_menu a:hover { /*마우스 커서 올리면 글자 색 바뀜*/
+  color:#595451;
 }
 
 
+
+#cate:hover > .sub_menu {
+  display: block;
+}
+
+/*우측 상단*/
+.nav_join {
+  display: flex;
+  align-items: center;
+  float: right;
+}
+.nav_join li {
+  padding: 14px 12px;
+  list-style: none;
+}
+
+
+
+
+/*반응형 : 크기 조절에 따라 레이아웃 배치 변화*/
+@media screen and (max-width: 768px){
+  
+  .navbar {
+    height: 200px;
+    flex-direction: column;
+    background-color: white;
+    clear: both;
+  }
+
+  .nav_category {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-left: 0px;
+  }
+  #cate {
+    height: 500px;
+    flex-direction: column;
+  }
+  .nav_category li{
+    text-align: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .sub_menu a{
+    display: none;
+  }
+  .nav_join {
+    position: absolute;
+    top: 300px;
+    background-color: aliceblue;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .user_menu {  
+    display: none;
+  }
+} 
+
+
+
+
+/*user*/
+.user {
+  z-index: 2;
+  display: flex;
+  float: right;
+  margin-right: 0px;
+}
+
+.user_menu li {
+  z-index: 2;
+  float: right;
+}
+
+/*searchbar*/
+.search-container{
+  width: 300px;
+  z-index: 2;
+  display: flex;
+  background-color: #262a2b;
+}
+
+input#search-bar{
+  width: 100%;
+  height: 50px;
+  padding: 0 20px;
+  font-size: 1rem;
+  z-index: 2;
+  border: none;
+  outline: none;
+  background-color: #595451;
+  color: white;
+}
+#search {
+  width:fit-content;
+  height: 50px;
+  background-color: #595451;
+}
+.search-icon{
+  position: relative;
+  float: right;
+  width: 30px;
+  top: 10px;
+  background-color: transparent;
+}
+
+
+#cart {
+  display: flex;
+  position: relative;
+  float: right;
+  z-index: 2;
+  width: 150px;
+  height: 50px;
+  margin : 0;
+  text-align: center;
+  border-right: 1px solid;
+}
+#cart a {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  z-index: 2;
+}
+#wishlist {
+  display: flex;
+  position: relative;
+  float: right;
+  width: 100px;
+  height: 50px;
+  margin : 0;
+  text-align: center;
+  z-index: 2;
+}
+#wishlist a{
+  width: 100%;
+  padding: 15px;
+  color: rgb(116, 35, 35);
+  z-index: 2;
+}
+.wishlist-icon {
+  position: relative;
+  float: left;
+  width: 20px;
+  z-index: 2;
+}
 /*container*/
 #container {
+  padding-top: 80px;
   width: 100%;
   min-height: 1000px;
-  background-color: gray;
 }
 #main_image {
-  clear: both;
+  position: relative;
+  top: -50px;
+  z-index: 1;
   width: 100%;
-  height: 400px;
-  background-color: pink;
+  height: 500px;
   overflow: hidden;
+}
+.img_list1 {
+  width: 49.5%;
+  height: auto;
+  float: left;
+}
+.img_list2 {
+  width: 49.5%;
+  height: auto;
+  float: right;
+}
+#bestitem { /*베스트 상품*/
+  position: relative;
+  margin: 0 auto;
+  margin-top: 4%;
+  width: 90%;
+  height: 500px;
+  background-color: #BFBFBD;
+}
+#bestitem p {
+  font-family: 'Shippori Antique B1', sans-serif;
+  font-size: 20px;
+}
+#bestlist {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-top: 2.5%;
+}
+.b_item {
+  position: relative;
+  width: 30%;
+  height: auto;
+  margin-left: 2.5%;
+  float: left;
+  overflow: hidden;
+}
+.b_item_box {
+  position: absolute;
+  width: max-content;
+}
+.b_item_box p {
+  color: white;
+  background-color: red;
+}
+.b_img_list {
+  width: 100%;
 }
 #aditem {
   position: relative;
   margin: 0 auto;
+  margin-top: 4%;
   width: 90%;
-  height: 200px;
-  background-color: blue;
+  height: 500px;
+  background-color: #595451;
 }
-#bestitem {
-  position: relative;
-  margin: 0 auto;
-  width: 90%;
-  height: 200px;
-  background-color: rgb(158, 255, 198);
+#aditem p {
+  font-family: 'Shippori Antique B1', sans-serif;
+  font-size: 20px;
 }
+
 #newitem {
   position: relative;
   margin: 0 auto;
+  margin-top: 4%;
   width: 90%;
-  height: 200px;
-  background-color: rgb(70, 13, 46);
+  height: 500px;
+  background-color: #BFBFBD;
+}
+#newitem p {
+  font-family: 'Shippori Antique B1', sans-serif;
+  font-size: 20px;
 }
 
 
 
 /*footer*/
 #footer {
+  position: relative;
   width: 100%;
-  height: 500px;
-  background-color: blue;
 }
 .info {
+  position: relative;
   width: 100%;
-  height: 400px;
-  background-color: aliceblue;
+  height: 300px;
+}
+.box {
+  float: left;
+  width: 30%;
+  font-size: 12px;
+
+}
+.box p {
+  padding: 6px;
 }
 .lastlink {
+  position: absolute;
+  background-color: #BFBFBD;
+  bottom: 0px;
   width: 100%;
-  height: 100px;
-  background-color: green;
+  height: 40px;
+  font-size: 15px;
+}
+.lastlink li{
+  background-color: #BFBFBD;
+  float: left;
+  padding: 10px;
+  border-left: 1px solid lightgray;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.lastlink a {
+  background-color:#BFBFBD;
 }
